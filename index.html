@@ -1,0 +1,145 @@
+<html>
+
+  <head>
+    <title>Halloween Trivia</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+	
+  <body>
+
+    <img src="images/halloweentext.png" class="hallLogo" />
+ 
+  <!-- Start Menu -->
+    <div id="startScreen" class="startScreen">
+      <div class="jackobutton" id="startbutton" onclick="startGame()">Start</button></div>
+      <div class="jackobutton" id="infobutton" onclick="clickInfo()">Info</button></div>
+    </div>
+	
+  <!-- Info Area -->
+    <div id="infoScreen" class="infoScreen">
+      <div>
+        <h2>Halloween Trivia</h2> 
+      </div>
+      <div>
+        <h3>Instructions</h3>
+        <p>Score 7 correct answers or higher to get the "Good Ending"</p>
+        <p>Answering more than 3 questions incorrectly will result in the "Bad Ending"</p>
+      </div>
+				
+      <button class="selectionFalse" onclick="closeInfo()" style="margin-left: auto; margin-right: auto; width: 70%;">Back</button>	
+    </div>
+
+  <!-- Question Selection -->
+    <div id="gameScreen" class="gameScreen" style="display: none;">
+		
+      <div class="questionarea">
+	      <h2 id="headerQ">Question Number</h2>
+	      <p id="content">Question Text</p>
+      </div>
+			
+      <div class="answerarea">
+	      <div id="op1" class="selectionFalse" onclick="select1()">Option 1</div>
+	      <div id="op2" class="selectionFalse" onclick="select2()">Option 2</div>
+	      <div id="op3" class="selectionFalse" onclick="select3()">Option 3</div>
+	      <div id="op4" class="selectionFalse" onclick="select4()">Option 4</div>
+      </div>
+			
+      <div class="submitArea">
+        <button id="submitA" class="submitA" onClick="submitA()">Submit</button>
+        <button id="nextQ" class="nextQ" onClick="nextQ()">Next</button>
+      </div>
+						
+    </div>
+		
+  <!-- Good Ending Screen -->
+    <div id="endAreaGood" class="goodEndAnimated" style="display: none;">
+		
+    <h2>Results</h2>
+			
+      <div id="results" class="results">
+        <div id ="correctNum"></div>
+      </div>
+
+      <div style="margin-top: auto; margin-bottom: 15px;">
+        <button class="jackobutton" onclick="resetGame()">Reset Game?</button>
+      </div>
+		
+    </div>
+	  
+  <!-- Bad Ending Screen -->
+    <div id="endAreaBad" class="badEndAnimated" style="display: none;">
+		
+    <h2>Results</h2>
+			
+    <div id="results" class="results">
+      <div id ="correctNumBad"></div>
+    </div>
+			
+    <div style="margin-top: auto; margin-bottom: 15px;">
+      <button class="jackobutton" onclick="resetGame()">Reset Game?</button>
+    </div>
+
+<!-- Audio Sources -->
+  <audio id="music">
+    <source src="audio/start-animation.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="wrong">
+    <source src="audio/wrong-answer.mp3" type="audio/mpeg">
+  </audio>
+	
+  <audio id="q1Correct">
+    <source src="audio/q1Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q2Correct">
+    <source src="audio/q2Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q3Correct">
+    <source src="audio/q3Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q4Correct">
+    <source src="audio/q4Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q5Correct">
+    <source src="audio/q5Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q6Correct">
+    <source src="audio/q6Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q7Correct">
+    <source src="audio/q7Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q8Correct">
+    <source src="audio/q8Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q9Correct">
+    <source src="audio/q9Correct.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="q10Correct">
+    <source src="audio/q10Correct.mp3" type="audio/mpeg">
+  </audio>
+	
+  <audio id="goodEnd">
+    <source src="audio/good-end.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="badEnd">
+    <source src="audio/bad-end.mp3" type="audio/mpeg">
+  </audio>
+		
+  <script type="text/javascript" src="script.js"></script>
+
+  </body>
+	
+</html>

@@ -1,0 +1,414 @@
+html {
+  background-image: linear-gradient(#000, #000, #000, #802000, orange);
+}
+
+body {
+  width: 96%;
+  background-image: url("images/myershouse2.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover; 
+  border: solid 3px orange;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto; 
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  color: orange;
+  text-align: center; 
+}
+
+h3 {
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:visited {
+  text-decoration: none;
+  color: orange;
+}
+
+.hallLogo {
+  width: 50%;
+  margin: auto;
+  display: block;
+  height: 30%;
+}
+
+/************* START / REPLAY MENU **************/
+
+.startScreen {
+  width: 60%;
+  border: solid 3px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/startscreen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameScreen {
+	width: 60%;
+	border: solid 3px orange;
+	border-radius: 10px;
+  margin: auto;
+	height: 45%;
+	background-image: url("images/startscreen.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	padding-top: 10px;
+  }
+
+.infoScreen {
+  width: 60%;
+  border: solid 3px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/startscreen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  overflow: hidden;
+  justify-content: space-between;
+	flex-direction: column;
+  color: #fff;
+}
+
+.infoScreen > div {
+  background-color: black;
+  border: 2px solid orange;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  width: 90%;
+  height: fit-content;
+  margin: 5px auto;
+}
+
+.startscreenAnimated {
+	width: 60%;
+	border: solid 2px orange;
+	border-radius: 10px;
+  margin: auto;
+  height: 45%;
+	background-image: url("images/startscreen.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+} 
+
+.jackobutton {
+  background-image: url("images/jackobutton.png");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  width: 40%;
+  height: 75px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  font-size: 2em; 
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jackobutton:hover {
+  background-image: url("images/jackobutton.gif");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  border: 2px solid red;
+  color: red;
+}
+
+.goodEnd {
+  width: 60%;
+  border: solid 2px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/endscreen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.goodEndAnimated {
+  width: 60%;
+  border: solid 2px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/endscreen.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.badEnd {
+  width: 60%;
+  border: solid 2px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/badendscreen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+}
+
+.badEndAnimated {
+  width: 60%;
+  border: solid 2px orange;
+  border-radius: 10px;
+  margin: auto;
+  height: 45%;
+  background-image: url("images/badendscreen.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+}
+
+.results {
+	color: orange;
+	font-size: 2em;
+	margin-top: 5%;
+	margin-bottom: 5%; 
+	margin-left: 5%;
+}
+
+/************* QUESTION AREA **************/
+
+.questionarea {
+  color: #FFF;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  background-color: black;
+  border: 2px solid orange;
+  border-radius: 15px;
+}
+
+.answerarea {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answerarea > div {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+	
+.selectionFalse {
+  width: 100%;
+  background-image: linear-gradient(#802000, orange);
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.selectionFalse:hover {
+  background-image: linear-gradient(orange, #802000);	
+  color: white;
+}
+
+.selectionTrue {
+  width: 100%;
+  background-image: linear-gradient(#000, green);
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.selectionWrong {
+  width: 100%;
+  background-image: linear-gradient(#000, red);
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.submitA {
+	background-image: linear-gradient(#802000, orange);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	height: 25px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 10px;
+	}
+
+.nextQ {
+	background-image: linear-gradient(#802000, orange);
+	display: block;
+	margin-left: auto; 
+	margin-right: 5px;
+	width: 100px;
+	height: 25px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border: 2px solid black;
+	border-radius: 10px;
+	}
+
+/************* Styles for Mobile **************/
+@media screen and (max-width: 600px) {
+  .startScreen {
+ 	width: 90%;
+ 	height: 75%;
+	flex-direction: column;
+	justify-content: space-evenly;
+  margin-bottom: 10px;
+  }
+
+  .hallLogo {
+    width: 80%;
+  }
+	
+	.gameScreen {
+	width: 90%;
+	height: 75%;
+	flex-direction: column;
+	justify-content: space-evenly;
+  margin-bottom: 10px;
+  }
+
+  .gameScreen > div {
+	margin: 2px auto;
+  }
+
+  .gameScreen > div > div {
+	margin: 1px;
+  }
+
+  .jackobutton {
+	background-image: url("images/jackobutton.png");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	width: 50%;
+	height: 65px;
+	border: 2px solid orange;
+	border-radius: 10px;
+	font-size: 1.5em; 
+	color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  .startscreenAnimated, .goodEndAnimated, .goodEnd, .badEndAnimated, .badEnd {
+	width: 80%;
+	height: 75%;
+  margin-bottom: 10px;
+  } 
+
+  .infoScreen {
+    width: 80%;
+	height: 75%;
+	max-height: 75%;
+	flex-direction: column;
+  }
+
+  .questionarea {
+	height: fit-content;
+  }
+
+  .answerarea {
+    width: 96%;
+	height: fit-content;
+	margin-top: 55px;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+  }
+
+  .answerarea > div {
+	width: 100%;
+  }
+
+  .selectionFalse {
+	height: fit-content;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	white-space: no-wrap;
+	text-overflow: ellipsis;
+  }
+
+  .selectionTrue {
+	height: fit-content;
+	font-size: 1em;
+	font-weight: bold;
+  }
+  
+  .selectionWrong {
+	height: fit-content;
+	font-size: 1em;
+	font-weight: bold;
+  }
+
+  .submitA {
+	font-weight: bold;
+	width: 90%;
+	margin-bottom: 5px;
+	margin-top: 0px;
+  }
+} 
