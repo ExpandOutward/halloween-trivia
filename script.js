@@ -14,6 +14,40 @@ var badEnding = 0;
 // play music at certain parts of the game. Different sounds will
 // play when the user submits an answer depending on whether or not
 // it is correct
+
+// Each answer uses a separate <audio> element. Stop and rewind them
+// before playing a new clip so overlapping queues do not stack.
+var answerSoundIds = [
+  "wrong",
+  "q1Correct",
+  "q2Correct",
+  "q3Correct",
+  "q4Correct",
+  "q5Correct",
+  "q6Correct",
+  "q7Correct",
+  "q8Correct",
+  "q9Correct",
+  "q10Correct"
+];
+
+function stopAnswerSounds()
+{
+  for (var i = 0; i < answerSoundIds.length; i++)
+  {
+    var audio = document.getElementById(answerSoundIds[i]);
+    if (audio)
+    {
+      audio.pause();
+      try
+      {
+        audio.currentTime = 0;
+      }
+      catch (e) {}
+    }
+  }
+}
+
 function playMusic() 
 {
   var music = document.getElementById("music");
@@ -615,6 +649,8 @@ function nextQ() {
 // q#Correct functions play a sound byte respective to the result 
 function submitA() 
 {
+  stopAnswerSounds();
+
   document.getElementById("submitA").disabled = true; 
   document.getElementById("nextQ").disabled = false;
   document.getElementById("op1").disabled = true;
