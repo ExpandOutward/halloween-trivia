@@ -31,19 +31,36 @@ var answerSoundIds = [
   "q10Correct"
 ];
 
+function stopSound(id)
+{
+  var audio = document.getElementById(id);
+  if (audio)
+  {
+    audio.pause();
+    try
+    {
+      audio.currentTime = 0;
+    }
+    catch (e) {}
+  }
+}
+
 function stopAnswerSounds()
 {
   for (var i = 0; i < answerSoundIds.length; i++)
   {
-    var audio = document.getElementById(answerSoundIds[i]);
-    if (audio)
+    stopSound(answerSoundIds[i]);
+  }
+}
+
+function stopAllAudioExcept(keepId)
+{
+  var ids = answerSoundIds.concat(["music", "goodEnd", "badEnd"]);
+  for (var i = 0; i < ids.length; i++)
+  {
+    if (ids[i] !== keepId)
     {
-      audio.pause();
-      try
-      {
-        audio.currentTime = 0;
-      }
-      catch (e) {}
+      stopSound(ids[i]);
     }
   }
 }
@@ -59,6 +76,7 @@ function goodMusic()
 {
   if (goodEnding == 1) 
   {
+    stopAllAudioExcept("goodEnd");
     var goodMusic = document.getElementById("goodEnd");
     goodMusic.play();
     console.log("goodMusic called - Don't Fear the Reaper");
@@ -69,6 +87,7 @@ function badMusic()
 {
   if (badEnding == 1) 
   {
+    stopAllAudioExcept("badEnd");
     var badMusic = document.getElementById("badEnd");
     badMusic.play();
     console.log("badMusic called - Halloween Theme");
@@ -604,6 +623,8 @@ function nextQ() {
 
   if (question.id == 11 && correct >= 7) 
   {
+    stopAllAudioExcept("goodEnd");
+
     document.getElementById("gameScreen").style.display = "none";
     document.getElementById("endAreaGood").style.display = "flex";
 
@@ -623,6 +644,8 @@ function nextQ() {
 
   if (question.id == 11 && correct < 7) 
   {
+    stopAllAudioExcept("badEnd");
+
     document.getElementById("gameScreen").style.display = "none";
     document.getElementById("endAreaBad").style.display = "flex";
 
